@@ -1,0 +1,33 @@
+﻿@model List<Lecture_3.Models.Entity.Product>
+@{ ViewBag.Title = "Index"; }
+
+<h2>Index</h2>
+<a href="/Product/create" class="btn btn-primary">Add Product</a>
+<a href="/Product/AddToCart" class="btn btn-primary">AddCart</a>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Description</th>
+    </tr>
+    @foreach (var p in Model)
+    {
+
+<tr>
+
+
+    <td>@p.ID</td>
+    <td>@p.Name</td>
+    <td>@p.Quantity</td>
+    <td>@p.Price</td>
+    <td>@p.Description</td>
+
+    <td> @Html.ActionLink("Add To Cart","Add To Cart", new { ID = p.ID }) </td>
+    <td>@Html.ActionLink("Delete", "Delete", new { ID = p.ID })</td>
+   
+</tr>}
+</table>
+

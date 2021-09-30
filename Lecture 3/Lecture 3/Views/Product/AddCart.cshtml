@@ -1,0 +1,21 @@
+﻿@model List<Lecture_3.Models.Entity.Product>
+
+@{ ViewBag.Title = "AddCart"; }
+
+<h2>Add To Cart</h2>
+
+
+<body>
+    Enter Product ID to Add To Cart
+</body>
+
+<form action="/product/AddCart" method="post">
+
+    <input type="number" name="ID" class="form-control">
+
+    <input type="submit" value="Add" class="btn btn-primary">
+</form>
+
+
+
+
