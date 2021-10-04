@@ -1,21 +1,33 @@
-﻿@model List<Lecture_3.Models.Entity.Product>
+﻿@model List<Lecture_3.Models.Entity.Products>
 
 @{ ViewBag.Title = "AddCart"; }
 
 <h2>Add To Cart</h2>
 
-
-<body>
-    Enter Product ID to Add To Cart
-</body>
-
 <form action="/product/AddCart" method="post">
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+        @foreach (var p in Model)
+        {
 
-    <input type="number" name="ID" class="form-control">
-
-    <input type="submit" value="Add" class="btn btn-primary">
-</form>
+<tr>
 
 
+    <td>@p.ID</td>
+    <td>@p.Name</td>
+    
+    <td>@p.Price</td>
+    <td>@p.Description</td>
 
 
+</tr>
+        }
+    </table>
+
+    </form>

@@ -1,9 +1,8 @@
-﻿@model List<Lecture_3.Models.Entity.Product>
+﻿@model List<Lecture_3.Models.Entity.Products>
 @{ ViewBag.Title = "Index"; }
 
 <h2>Index</h2>
 <a href="/Product/create" class="btn btn-primary">Add Product</a>
-<a href="/Product/AddToCart" class="btn btn-primary">AddCart</a>
 
 <table class="table table-bordered">
     <tr>
@@ -25,9 +24,10 @@
     <td>@p.Price</td>
     <td>@p.Description</td>
 
-    <td> @Html.ActionLink("Add To Cart","Add To Cart", new { ID = p.ID }) </td>
-    <td>@Html.ActionLink("Delete", "Delete", new { ID = p.ID })</td>
-   
-</tr>}
+    <td><a href="/product/AddCart" class="btn btn-primary" + @p.ID> Add To Cart</a></td>
+    <td> <a href="/product/delete?ID=@p.ID" class="btn btn-danger">Delete</a></td>
+
+</tr>
+    }
 </table>
 

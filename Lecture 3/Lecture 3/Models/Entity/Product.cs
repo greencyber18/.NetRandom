@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Lecture_3.Models.Entity
 {
-    public class Product
+    public class Products
     {
         public int ID { get; set; }
 

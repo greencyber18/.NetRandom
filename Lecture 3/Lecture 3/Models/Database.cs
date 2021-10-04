@@ -9,12 +9,12 @@ namespace Lecture_3.Models
 {
     public class Database
     {
-        public Product Product { get; set; }
+        public Products Products { get; set; }
        
         public Database() {
             string connString = @"Server=DESKTOP-GQ5KVVJ\SQLEXPRESS;Database=Products;Integrated Security=true";
             SqlConnection conn = new SqlConnection(connString);
-            Product = new Product(conn);
+            Products = new Products(conn);
             
         }
     }

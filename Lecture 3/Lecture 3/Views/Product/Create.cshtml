@@ -1,4 +1,4 @@
-﻿@model Lecture_3.Models.Entity.Product
+﻿@model Lecture_3.Models.Entity.Products
 @{
     ViewBag.Title = "Create";
 }
@@ -7,14 +7,10 @@
 <form action="/product/create" method="post">
     Name:<input type="text" name="Name" class="form-control">
 
-
     Stock Quantity:<input type="number" name="Quantity" class="form-control">
-
     Price:<input type="number" name="Price" class="form-control">
 
-
     Descriptiom:<input type="text" name="Description" class="form-control">
-
     <input type="submit" value="Add" class="btn btn-primary">
 </form>
 
