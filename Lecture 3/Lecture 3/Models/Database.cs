@@ -12,7 +12,7 @@ namespace Lecture_3.Models
         public Products Products { get; set; }
        
         public Database() {
-            string connString = @"Server=DESKTOP-GQ5KVVJ\SQLEXPRESS;Database=Products;Integrated Security=true";
+            string connString = @"Server=DESKTOP-3LSC78C\SQLEXPRESS;Database=Products;Integrated Security=true";
             SqlConnection conn = new SqlConnection(connString);
             Products = new Products(conn);
             
